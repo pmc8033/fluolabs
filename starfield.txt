@@ -1,0 +1,20 @@
+stars_x = []
+stars_y = []
+
+def setup():
+
+    size(800, 800)
+
+    for i in range(400):
+        stars_x.append(random(width))
+        stars_y.append(random(height))
+    background(0)
+
+def draw():
+    fill(mouseX, mouseY, 0)
+    for i in range(400):
+        ellipse(stars_x[i], stars_y[i], 8, 8)
+        
+    for i in range(400):
+        stars_x[i] = stars_x[i] + 1
+        stars_y[i] = stars_y[i] + 1
